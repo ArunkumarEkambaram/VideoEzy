@@ -7,3 +7,24 @@
 
 <h2>@Model.Name</h2>
 
+<ul>
+    <li>
+        Mobile Number :@Model.MobileNo
+    </li>
+    <li>
+        Email Address :@Model.EmailAddress
+    </li>
+    <li>
+        Membership Type :@Model.MembershipType.Description
+    </li>
+
+    @if (Model.BirthDate.HasValue)
+    {
+        <li>
+            BirthDate: @Model.BirthDate.Value.ToString("dd-MM-yyyy")
+        </li>
+    }
+   
+
+</ul>
+

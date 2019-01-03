@@ -208,11 +208,40 @@
     <Compile Include="Migrations\201901031320135_InitialMigration.Designer.cs">
       <DependentUpon>201901031320135_InitialMigration.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201901031323558_AddingCustomerTable.cs" />
+    <Compile Include="Migrations\201901031323558_AddingCustomerTable.Designer.cs">
+      <DependentUpon>201901031323558_AddingCustomerTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201901031349489_CreateMembershipTypeAndAlterCustomerTable.cs" />
+    <Compile Include="Migrations\201901031349489_CreateMembershipTypeAndAlterCustomerTable.Designer.cs">
+      <DependentUpon>201901031349489_CreateMembershipTypeAndAlterCustomerTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201901031354494_PopulateMembershipType.cs" />
+    <Compile Include="Migrations\201901031354494_PopulateMembershipType.Designer.cs">
+      <DependentUpon>201901031354494_PopulateMembershipType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201901031404092_altercustomertable.cs" />
+    <Compile Include="Migrations\201901031404092_altercustomertable.Designer.cs">
+      <DependentUpon>201901031404092_altercustomertable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201901031417062_AlterCustomerTableWithIndex.cs" />
+    <Compile Include="Migrations\201901031417062_AlterCustomerTableWithIndex.Designer.cs">
+      <DependentUpon>201901031417062_AlterCustomerTableWithIndex.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201901031505548_NameColumnToMemberShipType.cs" />
+    <Compile Include="Migrations\201901031505548_NameColumnToMemberShipType.Designer.cs">
+      <DependentUpon>201901031505548_NameColumnToMemberShipType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201901031510343_AddBirthDateColumnToCustomerTable.cs" />
+    <Compile Include="Migrations\201901031510343_AddBirthDateColumnToCustomerTable.Designer.cs">
+      <DependentUpon>201901031510343_AddBirthDateColumnToCustomerTable.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\MembershipType.cs" />
     <Compile Include="Models\Movie.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
@@ -424,6 +453,27 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201901031320135_InitialMigration.resx">
       <DependentUpon>201901031320135_InitialMigration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201901031323558_AddingCustomerTable.resx">
+      <DependentUpon>201901031323558_AddingCustomerTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201901031349489_CreateMembershipTypeAndAlterCustomerTable.resx">
+      <DependentUpon>201901031349489_CreateMembershipTypeAndAlterCustomerTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201901031354494_PopulateMembershipType.resx">
+      <DependentUpon>201901031354494_PopulateMembershipType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201901031404092_altercustomertable.resx">
+      <DependentUpon>201901031404092_altercustomertable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201901031417062_AlterCustomerTableWithIndex.resx">
+      <DependentUpon>201901031417062_AlterCustomerTableWithIndex.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201901031505548_NameColumnToMemberShipType.resx">
+      <DependentUpon>201901031505548_NameColumnToMemberShipType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201901031510343_AddBirthDateColumnToCustomerTable.resx">
+      <DependentUpon>201901031510343_AddBirthDateColumnToCustomerTable.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

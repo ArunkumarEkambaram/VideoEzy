@@ -1,4 +1,4 @@
-﻿using System.Collections.Generic;
+﻿using System.Data.Entity;
 using System.Linq;
 using System.Web.Mvc;
 using VideoEzy_MVC.Models;
@@ -7,29 +7,44 @@ namespace VideoEzy_MVC.Controllers
 {
     public class CustomersController : Controller
     {
+        private ApplicationDbContext dbContext = null;
+
+        public CustomersController()
+        {
+            dbContext = new ApplicationDbContext();
+        }
+
+        protected override void Dispose(bool disposing)
+        {
+            dbContext.Dispose();
+        }
+
         // GET: Customers
         public ActionResult Index()
         {
-            var customers = GetCustomers();
+            var customers = dbContext.Customers.Include(c => c.MembershipType).ToList();
             return View(customers);
         }
 
-        public ActionResult Details(int id)
+        public ActionResult Details(int? id)
         {
-            var customers = GetCustomers().FirstOrDefault(c => c.Id == id);
-            return View(customers);
-        }
-
-        public List<Customer> GetCustomers()
-        {
-            List<Customer> customers = new List<Customer>
+            if (id.HasValue)
             {
-                new Customer{Id=1,Name="Bathri"},
-                new Customer{Id=2,Name="Pavan"},
-                new Customer{Id=3,Name="Kayal"}
-            };
-
-            return customers;
+                var customers = dbContext.Customers.Include(c => c.MembershipType).FirstOrDefault(c => c.Id == id);
+                if (customers != null)
+                {
+                    return View(customers);
+                }
+                else
+                {
+                    return new HttpNotFoundResult("Customer ID does not exist");
+                }
+            }
+            else
+            {
+                return new HttpNotFoundResult("Path does not exist");
+            }
         }
+
     }
 }
