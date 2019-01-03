@@ -13,7 +13,7 @@ namespace VideoEzy_MVC.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "201901031312097_InitialMigration"; }
+            get { return "201901031320135_InitialMigration"; }
         }
         
         string IMigrationMetadata.Source
