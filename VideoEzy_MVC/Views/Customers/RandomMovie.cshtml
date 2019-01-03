@@ -1,0 +1,24 @@
+﻿@model VideoEzy_MVC.ViewModel.CustomerMovieViewModel
+
+@{
+    ViewBag.Title = "RandomMovie";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>@Model.Movie.Name</h2>
+
+@if (Model.Customers.Count == 0)
+{
+    <text>No Customer rented this movie</text>
+}
+else
+{
+    <ul>
+        @foreach (var cust in Model.Customers)
+        {
+            <li>
+                @cust.Name
+            </li>
+        }
+    </ul>
+}
